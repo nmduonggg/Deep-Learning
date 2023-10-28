@@ -209,7 +209,7 @@ if __name__ == '__main__':
 
     # Predict no rotation
     final = [
-       'model35_full', 'model3_tone_full'
+       'model3_tone_full'
     ]
     for model_name in final:
         # Set seed
