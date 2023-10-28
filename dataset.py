@@ -60,6 +60,9 @@ class HandWrittenDataset(Dataset):
         except:
             img_name = f'{self.name}_{idx}.png'
             image = Image.open(os.path.join(self.root_dir, img_name))
+            
+        image = np.array(image)[..., :3]
+        image = Image.fromarray(image.astype('uint8'), 'RGB')
         # Transform image
         if self.transform:
             image = self.transform(image)
